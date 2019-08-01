@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume | Akin Adewale</title>
+    <meta charset="UTF-8"><!--[if IE]><![endif]-->
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Akin Adewale | Software Engineer &amp; UX Enthusiast</title>
+    <link rel="shortcut icon" href="images/favicon.ico" hreflang="en-us">
+
+<!--Read http://ogp.me/ -->
+    <meta property="og:title" content="Resume | Akin Adewale" />
+    <meta property="og:description" content="An ever curious Software Engineering student who creates and manipulates elements and experiences through code." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.akinade.com/resume" />
+    <meta property="og:site_name" content="Resume | Akin Adewale" />
+    <!-- <meta property="og:image" content="http://akinade.com/img/og.png" /> -->
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="672" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:locale" content="en_CA">
+
+    <meta name="description" content="An ever curious Software Engineering student who creates and manipulates elements and experiences through code.">
+    <meta name="keywords" content="design, development, web, Akinad, Akin, Adewale, software, yorku">
+    <!-- <meta name="google-site-verification" content="**insert after domain is purchased**" /> -->
+
+    <meta itemprop="name" content="Resume | Akin Adewale">
+    <meta itemprop="description" content="Design-minded, detail oriented web developer passionate about combining beautiful code with beautiful design.">
+    <!-- <meta itemprop="image" content="http://akinade.com/img/og.png"> -->
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Catamaran:200,300,400,500,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+    <div id="content"></div>
+    <script src="https://fb.me/react-0.14.6.js"></script>
+    <script src="https://fb.me/react-dom-0.14.6.js"></script>
+    <script src="https://unpkg.com/react@0.12.1/dist/JSXTransformer.js"></script>
+    <script type="text/jsx">
+        var DATA = {
+            name: "Hi, I'm Akin",
+            subtext: "Software Engineering Student & Design Enthusiast based in Toronto, CA",
+            jobStatus: "Enterprise Analyst Co-op @ BlackBerry",
+            instaURL: 'https://www.instagram.com/Akin_AD/',
+            githubURL: 'https://github.com/AkinAd',
+            linkedinURL: 'https://www.linkedin.com/in/akinad',
+            resumeURL: 'resources/Akin_Adewale_Resume.pdf'
+        }
+
+        var App = React.createClass({
+            render: function() {
+                return(
+                    <div className="app">
+                        <Left
+                            name={this.props.profileData.name}
+                            subtext={this.props.profileData.subtext}
+                            jobStatus={this.props.profileData.jobStatus}
+                            instaURL={this.props.profileData.instaURL}
+                            githubURL={this.props.profileData.githubURL}
+                            linkedinURL={this.props.profileData.linkedinURL}
+                        />
+                        <Right
+                            intro={this.props.profileData.intro}
+                            resumeURL={this.props.profileData.resumeURL}
+                        />
+                    </div>
+                );
+            }
+        });
+    var Left = React.createClass({
+        render: function() {
+            return(
+                <div className="left">
+                  <div className="bg-img"></div>
+                    <div className="left-inner">
+                      <div className="info">
+                        <h2 className="name">{this.props.name}</h2>
+                        <div className="subtext">{this.props.subtext}</div>
+                        <div className="jobStatus">{this.props.jobStatus}</div>
+                        <div className="social-links">
+                          <a href={this.props.instaURL} target="_blank"><i className="fa fa-instagram"></i></a>
+                          <a href={this.props.githubURL} target="_blank"><i className="fa fa-github"></i></a>
+                          <a href={this.props.linkedinURL}  target="_blank"><i className="fa fa-linkedin"></i></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            );
+        }
+    });
+
+     var Right = React.createClass({
+      render: function() {
+        return(
+          <div className="right">
+            <div className="right-inner">
+              <div className="introduction">
+                <h4>Intro</h4>
+                <div className="content">
+                  <p className="intro-p">I am currently going into my fourth year of Software Engineering at Lassonde School of Engineering, York University</p>
+                  <p className="intro-p">I have quite the curios mind, trying to understand how things work and finding ways of improving them. Thanks to this and my love for computers and tech, I feel right at home as a software engineer I&#39;m experienced in developing and designing products and creating experiences</p>
+                  <span className="intro-p hire-me-thx">I&#39;m currently looking for a coop position in summer 2020!</span>
+                </div>
+              </div>
+              <div className="Skills">
+                <h4>Skills</h4>
+                  <div className="content">
+                    <div className="skill-category">
+                      <strong>Languages</strong>
+                      <span>Javascript (ES6), HTML5, CSS3, Java, Python</span>
+                    </div>
+                    <div className="skill-category">
+                      <strong>Libraries &amp; Frameworks: &nbsp;</strong>
+                      <span>jQuery, Bootsrap4,React, Node, Angular, MongoDB</span>
+                    </div>
+                    <div className="skill-category">
+                      <strong>Tools: &nbsp;</strong>
+                      <span>Git &amp; Github, Command Line, Adobe Photoshop, InDesign, Adobe XD, Illustrator</span>
+                    </div>
+                </div>
+            </div>
+            <div className="Education">
+              <h4>Education</h4>
+              <div className="content">
+                <div className="university">
+                  <a href="https://lassonde.yorku.ca/" targer="_blank">Lassonde School of Engineering, York university</a>
+                </div>
+                <div className="major"><strong>Major:</strong> Software Engineering</div>
+              </div>
+            </div>
+             <div className="experience">
+                <h4>Experience</h4>
+                <div className="content">
+                  <div className="exp-item">
+                    <div className="job">
+                      <a className="company" href="https://www.blackberry.com" target="_blank">BlackBerry Ltd</a>
+                      <div className="duration">January 2019 &mdash; August 2019</div>
+                    </div>
+                    <div className="title">Enterprise Analyst</div>
+                    <ul className="description">
+                      <li>Represented BlackBerry for product specific customer inquiries/support and issues via inbound voice and email interactions, took ownership of cases and brought resolution to customers&#39; issues. </li>
+                      <li>Identified and documented potential software/hardware defects, prepared and managed escalations for approval to Software Development and ensured product improvement </li>
+                      <li>Collected information and performed advanced troubleshooting as a Subject Matter Expert (SME) of Desktop, Handheld, BlackBerry Internet Service and BlackBerry Enterprise Server inquiries from specialists and associates </li>
+                    </ul>
+                  </div>
+                  <div className="exp-item">
+                    <div className="job">
+                      <a className="company" href="http://computing.yorku.ca/" target="_blank">York UIT</a>
+                      <div className="duration">May 2018 &mdash; December 2018</div>
+                    </div>
+                    <div className="title">Student Computing Services Support Assistantp</div>
+                    <ul className="description">
+                      <li>Applied computer knowledge and technical skill in helping students in UIT Client Services Computer labs with basic usage of lab computers, printing services and network connectivity </li>
+                      <li>Exercised problem solving and leadership skills by training new staff on policies and procedures, resolving customer-staff conflicts and conducting informal peer-evaluations to identify points for improvement. </li>
+                    </ul>
+                  </div>
+                </div>
+            </div>
+        <div className="Projects">
+          <h4>Projects</h4>
+            <div className="content">
+              <div className="project-item">
+                <a className="project-title" href="http://www.akinade.com/" target="_blank">www.akinade.com www.awakined.com</a>
+                <p className="project-desc">Portfolio site designed and coded from scratch to showcase my skills and past work</p>
+              </div>
+              <div className="project-item">
+                <a className="project-title" href="https://github.com/AkinAD/ExMech/" target="_blank">Treasure Box Braile</a>
+                <p className="project-desc">Interactive story creation for visually impaired educators and students</p>
+              </div>
+              <div className="project-item">
+                <a className="project-title" href="https://github.com/AkinAD/myWalk/" target="_blank">My Walk</a>
+                <p className="project-desc">Crowd sourced application/webpage that provides users with information about the safety of the sidewalk with relation to icy condition, construction, etc</p>
+              </div>
+            </div>
+        </div>
+        <a className="resume" href={this.props.resumeURL} target="_blank"><div className="resume-link">Grab a PDF of my full resume</div></a>
+                <div className="credits">This web project was <strong>heavily </strong>inspired by <a href="https://github.com/bchiang7/react-profile" className="herName">Brittany Chiang</a> from <a href="http://brittanychiang.com/r">brittanychiang.com</a></div>
+      </div>
+    </div>
+                );
+            }
+        });
+
+ReactDOM.render(
+  <App profileData={DATA}/>,
+        document.getElementById('content')
+);
+
+    </script>
+</body>
+</html>
